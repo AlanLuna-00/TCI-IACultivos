@@ -1,0 +1,15 @@
+# Configuración principal
+title: IA para Cultivos
+description: Sitio web de IA para cultivos
+theme: jekyll-theme-primer
+
+# Configuración de GitHub Pages
+remote_theme: pages-themes/primer
+
+# Otras configuraciones opcionales
+plugins:
+  - jekyll-seo-tag
+  - jekyll-paginate
+
+# Opciones adicionales de personalización
+# ...
