@@ -3,3 +3,7 @@
     height: 400px;
     margin-top: 20px;
 }
+
+.card-body img {
+    height: 400px;
+}

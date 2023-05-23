@@ -11,22 +11,22 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">IA para Cultivos</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="../index.html">Iniciar sesión</a>
+                    <a class="nav-link" href="../index.html">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="aboutus.html">Acerca de nosotros</a>
+                    <a class="nav-link" href="aboutus.html">Data</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Panel de control</a>
+                    <a class="nav-link" href="#">Dashboard</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item me-3">
                     <div class="btn-group dropstart">
                         <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -54,103 +54,92 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-2 sidebar">
-                <h3>Datos de la zona:</h3>
-                <p>Última cosecha: 25/05/2023</p>
-                <p>Cantidad de agua llovida hoy: 15 ML</p>
-                <p>Recomendación de riego: 20 ML</p>
-                <p>Temperatura: 25°C</p>
-                <p>Humedad: 80%</p>
-                <p>Velocidad del viento: 10 km/h</p>
-                <p>Proxima cosecha: 14/09/2023</p>
+        <div class="">
+            <h1>Dashboard</h1>
+            <div class="chart-container">
+                <canvas id="chart"></canvas>
             </div>
-            <div class="col-10 main-content">
-                <h1>Dashboard</h1>
-                <div class="chart-container">
-                    <canvas id="chart"></canvas>
-                </div>
-                <h2>Estado de los sensores</h2>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Sensor</th>
-                            <th>Tipo de planta</th>
-                            <th>Estado</th>
-                            <th>Cantidad de agua (ML)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Sensor 1</td>
-                            <td>Planta A</td>
-                            <td><span class="badge bg-success">Funcionando</span></td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <td>Sensor 2</td>
-                            <td>Planta A</td>
-                            <td><span class="badge bg-success">Funcionando</span></td>
-                            <td>8</td>
-                        </tr>
-                        <tr>
-                            <td>Sensor 3</td>
-                            <td>Planta A</td>
-                            <td><span class="badge bg-danger">No funciona</span></td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>Sensor 4</td>
-                            <td>Planta A</td>
-                            <td><span class="badge bg-success">Funcionando</span></td>
-                            <td>12</td>
-                        </tr>
-                        <tr>
-                            <td>Sensor 5</td>
-                            <td>Planta A</td>
-                            <td><span class="badge bg-success">Funcionando</span></td>
-                            <td>9</td>
-                        </tr>
-                        <tr>
-                            <td>Sensor 6</td>
-                            <td>Planta B</td>
-                            <td><span class="badge bg-success">Funcionando</span></td>
-                            <td>7</td>
-                        </tr>
-                        <tr>
-                            <td>Sensor 7</td>
-                            <td>Planta B</td>
-                            <td><span class="badge bg-success">Funcionando</span></td>
-                            <td>11</td>
-                        </tr>
-                        <tr>
-                            <td>Sensor 8</td>
-                            <td>Planta B</td>
-                            <td><span class="badge bg-danger">No funciona</span></td>
-                            <td>0</td>
-                        </tr>
-                        <tr>
-                            <td>Sensor 9</td>
-                            <td>Planta B</td>
-                            <td><span class="badge bg-success">Funcionando</span></td>
-                            <td>6</td>
-                        </tr>
-                        <tr>
-                            <td>Sensor 10</td>
-                            <td>Planta B</td>
-                            <td><span class="badge bg-success">Funcionando</span></td>
-                            <td>13</td>
-                        </tr>
-                        <tr>
-                            <td colspan="4">
-                                <button class="btn btn-primary" onclick="agregarManualmente()">Agregar
-                                    manualmente</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <h2>Estado de los sensores</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Sensor</th>
+                        <th>Tipo de planta</th>
+                        <th>Estado</th>
+                        <th>Cantidad de agua (ML)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sensor 1</td>
+                        <td>Planta A</td>
+                        <td><span class="badge bg-success">Funcionando</span></td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>Sensor 2</td>
+                        <td>Planta A</td>
+                        <td><span class="badge bg-success">Funcionando</span></td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>Sensor 3</td>
+                        <td>Planta A</td>
+                        <td><span class="badge bg-danger">No funciona</span></td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Sensor 4</td>
+                        <td>Planta A</td>
+                        <td><span class="badge bg-success">Funcionando</span></td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>Sensor 5</td>
+                        <td>Planta A</td>
+                        <td><span class="badge bg-success">Funcionando</span></td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>Sensor 6</td>
+                        <td>Planta B</td>
+                        <td><span class="badge bg-success">Funcionando</span></td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>Sensor 7</td>
+                        <td>Planta B</td>
+                        <td><span class="badge bg-success">Funcionando</span></td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>Sensor 8</td>
+                        <td>Planta B</td>
+                        <td><span class="badge bg-danger">No funciona</span></td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>Sensor 9</td>
+                        <td>Planta B</td>
+                        <td><span class="badge bg-success">Funcionando</span></td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>Sensor 10</td>
+                        <td>Planta B</td>
+                        <td><span class="badge bg-success">Funcionando</span></td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <button class="btn btn-primary" onclick="agregarManualmente()">Agregar
+                                manualmente</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
+    </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
