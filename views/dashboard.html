@@ -33,6 +33,10 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Dashboard</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="soporte.html">Soporte</a>
+                </li>
+
                 <li class="nav-item me-3">
                     <div class="btn-group dropstart">
                         <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
@@ -74,6 +78,8 @@
                         <th>Sensor</th>
                         <th>Tipo de planta</th>
                         <th>Estado</th>
+                        <th>Temperatura</th>
+                        <th>Humedad</th>
                         <th>Cantidad de agua (ML)</th>
                     </tr>
                 </thead>
@@ -82,70 +88,90 @@
                         <td>Sensor 1</td>
                         <td>Planta A</td>
                         <td><span class="badge bg-success">Funcionando</span></td>
+                        <td>25°C</td>
+                        <td>60%</td>
                         <td>10</td>
                     </tr>
                     <tr>
                         <td>Sensor 2</td>
                         <td>Planta A</td>
                         <td><span class="badge bg-success">Funcionando</span></td>
+                        <td>28°C</td>
+                        <td>55%</td>
                         <td>8</td>
                     </tr>
                     <tr>
                         <td>Sensor 3</td>
                         <td>Planta A</td>
                         <td><span class="badge bg-danger">No funciona</span></td>
+                        <td>N/A</td>
+                        <td>N/A</td>
                         <td>0</td>
                     </tr>
                     <tr>
                         <td>Sensor 4</td>
                         <td>Planta A</td>
                         <td><span class="badge bg-success">Funcionando</span></td>
+                        <td>23°C</td>
+                        <td>68%</td>
                         <td>12</td>
                     </tr>
                     <tr>
                         <td>Sensor 5</td>
                         <td>Planta A</td>
                         <td><span class="badge bg-success">Funcionando</span></td>
+                        <td>26°C</td>
+                        <td>62%</td>
                         <td>9</td>
                     </tr>
                     <tr>
                         <td>Sensor 6</td>
                         <td>Planta B</td>
                         <td><span class="badge bg-success">Funcionando</span></td>
+                        <td>22°C</td>
+                        <td>70%</td>
                         <td>7</td>
                     </tr>
                     <tr>
                         <td>Sensor 7</td>
                         <td>Planta B</td>
                         <td><span class="badge bg-success">Funcionando</span></td>
+                        <td>24°C</td>
+                        <td>67%</td>
                         <td>11</td>
                     </tr>
                     <tr>
                         <td>Sensor 8</td>
                         <td>Planta B</td>
                         <td><span class="badge bg-danger">No funciona</span></td>
+                        <td>N/A</td>
+                        <td>N/A</td>
                         <td>0</td>
                     </tr>
                     <tr>
                         <td>Sensor 9</td>
                         <td>Planta B</td>
                         <td><span class="badge bg-success">Funcionando</span></td>
+                        <td>20°C</td>
+                        <td>75%</td>
                         <td>6</td>
                     </tr>
                     <tr>
                         <td>Sensor 10</td>
                         <td>Planta B</td>
                         <td><span class="badge bg-success">Funcionando</span></td>
+                        <td>27°C</td>
+                        <td>58%</td>
                         <td>13</td>
                     </tr>
                     <tr>
-                        <td colspan="4">
-                            <button class="btn btn-primary" onclick="agregarManualmente()">Agregar
-                                manualmente</button>
+                        <td colspan="6">
+                            <button class="btn btn-primary" onclick="agregarManualmente()">Agregar manualmente</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
+
         </div>
     </div>
     </div>

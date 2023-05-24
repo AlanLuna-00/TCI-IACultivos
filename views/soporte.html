@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>IA para Cultivos - Data de las plantas</title>
-    <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte de Contacto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
@@ -28,15 +28,11 @@
                     <a class="nav-link" href="aboutus.html">Planta A</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Planta B</a>
+                    <a class="nav-link" href="plantaB.html">Planta B</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="dashboard.html">Dashboard</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="soporte.html">Soporte</a>
-                </li>
-
                 <li class="nav-item me-3">
                     <div class="btn-group dropstart">
                         <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
@@ -65,87 +61,26 @@
         </div>
     </nav>
     <div class="container">
-        <h1>Planta de Trigo (B)</h1>
-        <hr>
-        <div class="row">
-            <div class="col-md-6">
-                <h2>Últimas cosechas</h2>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Fecha de cosecha</th>
-                            <th>Promedio de agua llovida</th>
-                            <th>Promedio de temperatura</th>
-                            <th>Promedio de humedad</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>10/05/2023</td>
-                            <td>18 ML</td>
-                            <td>26°C</td>
-                            <td>75%</td>
-                        </tr>
-                        <tr>
-                            <td>25/04/2023</td>
-                            <td>15 ML</td>
-                            <td>24°C</td>
-                            <td>80%</td>
-                        </tr>
-                        <tr>
-                            <td>10/04/2023</td>
-                            <td>12 ML</td>
-                            <td>23°C</td>
-                            <td>78%</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <h1 class="mt-5">Soporte de Contacto</h1>
+        <p>Si tienes algún problema con nuestro software, por favor completa el siguiente formulario y nos pondremos en
+            contacto contigo lo antes posible.</p>
+        <form>
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre de Empresa</label>
+                <input type="text" class="form-control" id="name" placeholder="Ingrese el nombre de su empresa">
             </div>
-            <div class="col-md-6">
-                <h2>Cosecha actual</h2>
-                <div class="row">
-                    <div class="col-md-6 col-sm-12">
-                        <h5>Condiciones actuales:</h5>
-                        <ul>
-                            <li>Agua: 20 ML</li>
-                            <li>Temperatura: 28°C</li>
-                            <li>Humedad: 70%</li>
-                        </ul>
-                        <!-- Recomendadas -->
-                        <h5>Recomendaciones:</h5>
-                        <ul>
-                            <li>Agua: 18 ML</li>
-                            <li>Temperatura: 26°C</li>
-                            <li>Humedad: 75%</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                        <h5>Fecha de cosecha estimada:</h5>
-                        <p>30/05/2023</p>
-                        <h5>Estado de la planta:</h5>
-                        <p>Madurando</p>
-                        <!-- mas datos -->
-                        <h5 class="mt-3">Cuánto agua regar:</h5>
-                        <p>3 ML</p>
-                        <h5>De qué manera:</h5>
-                        <!-- hazlo industrialmente -->
-                        <ul>
-                            <li>0.3 ML cada 2hs</li>
-                            <li>Manualmente</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo electrónico</label>
+                <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico">
             </div>
-        </div>
-        <div class="chart-container">
-            <canvas id="chartPlantaA"></canvas>
-        </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Ingrese su mensaje"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+        </form>
     </div>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"></script>
-
-    <script src="./chartPlantA.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
         integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
         crossorigin="anonymous"></script>
