@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 label: 'Agua llovida',
                 data: [9, 5, 10, 12, 15, 10, 14, 11],
                 borderColor: 'blue',
-                backgroundColor: 'rgba(0, 123, 255, 0.1)',
+                backgroundColor: 'rgba(0, 123, 255, 0.5)',
                 borderWidth: 1,
                 fill: 'start' // Relleno de área desde la parte inferior del gráfico
             },
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 label: 'Temperatura',
                 data: [32, 29, 27, 24, 25, 23, 21, 19],
                 borderColor: 'orange',
-                backgroundColor: 'rgba(255, 159, 64, 0.1)',
+                backgroundColor: 'rgba(255, 159, 64, 0.5)',
                 borderWidth: 1,
                 fill: 'origin' // Relleno de área desde el eje y = 0
             },
@@ -26,50 +26,36 @@ document.addEventListener("DOMContentLoaded", function () {
                 label: 'Humedad',
                 data: [83, 79, 61, 71, 78, 65, 74, 65],
                 borderColor: 'green',
-                backgroundColor: 'rgba(75, 192, 192, 0.1)',
+                backgroundColor: 'rgba(75, 192, 192, 0.5)',
                 borderWidth: 1,
-                fill: '+1' // Relleno de área hasta el siguiente dataset
+                fill: 'start' // Relleno de área hasta el siguiente dataset
             }
         ]
     };
 
-    // Opciones del gráfico
     var options = {
         responsive: true,
         maintainAspectRatio: false,
-        plugins: {
-            legend: {
-                position: 'top' // Posición de la leyenda en la parte superior
-            },
-            title: {
-                display: true,
-                text: 'Datos climáticos',
-                font: {
-                    size: 16
-                }
+        scales: {
+            y: {
+                beginAtZero: true
             }
         },
-        scales: {
-            x: {
+        plugins: {
+            legend: {
                 display: true,
-                title: {
-                    display: true,
-                    text: 'Meses'
+                position: 'top', // Cambiar la posición de la leyenda a la parte superior
+                labels: {
+                    boxHeight: 12,
+                    boxWidth: 12,
+                    font: {
+                        size: 12
+                    }
                 }
-            },
-            y: {
-                display: true,
-                title: {
-                    display: true,
-                    text: 'Valores'
-                },
-                suggestedMin: 0, // Valor mínimo sugerido en el eje y
-                suggestedMax: 100 // Valor máximo sugerido en el eje y
             }
         }
     };
 
-    // Crear el gráfico de línea
     var chart = new Chart(ctx, {
         type: 'line',
         data: data,
