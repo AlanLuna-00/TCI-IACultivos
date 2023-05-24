@@ -7,3 +7,8 @@
 .card-body img {
     height: 400px;
 }
+
+.logo {
+    height: 50px;
+    margin-left: 10px;
+}
