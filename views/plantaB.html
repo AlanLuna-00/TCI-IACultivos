@@ -2,10 +2,12 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>IA para Cultivos - Data de las plantas</title>
+    <link rel="stylesheet" href="../style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
@@ -38,14 +40,20 @@
                             <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024"
                                 height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                 <path
-                                    d="M858.5 763.6a374 374 0 0 0-80.6-119.5 375.63 375.63 0 0 0-119.5-80.6c-.4-.2-.8-.3-1.2-.5C719.5 518 760 444.7 760 362c0-137-111-248-248-248S264 225 264 362c0 82.7 40.5 156 102.8 201.1-.4.2-.8.3-1.2.5-44.8 18.9-85 46-119.5 80.6a375.63 375.63 0 0 0-80.6 119.5A371.7 371.7 0 0 0 136 901.8a8 8 0 0 0 8 8.2h60c4.4 0 7.9-3.5 8-7.8 2-77.2 33-149.5 87.8-204.3 56.7-56.7 132-87.9 212.2-87.9s155.5 31.2 212.2 87.9C779 752.7 810 825 812 902.2c0 4.4 3.6 7.8 8 7.8h60c4.4 0 7.9-3.5 8-7.8a372.96 372.96 0 0 0-78.5-139.4zm-457 164.5c-155.3 0-282-126.7-282-282s126.7-282 282-282s282 126.7 282 282s-126.7 282-282 282zm0-512c-123.7 0-224 100.3-224 224s100.3 224 224 224s224-100.3 224-224s-100.3-224-224-224z">
+                                    d="M858.5 763.6a374 374 0 0 0-80.6-119.5 375.63 375.63 0 0 0-119.5-80.6c-.4-.2-.8-.3-1.2-.5C719.5 518 760 444.7 760 362c0-137-111-248-248-248S264 225 264 362c0 82.7 40.5 156 102.8 201.1-.4.2-.8.3-1.2.5-44.8 18.9-85 46-119.5 80.6a375.63 375.63 0 0 0-80.6 119.5A371.7 371.7 0 0 0 136 901.8a8 8 0 0 0 8 8.2h60c4.4 0 7.9-3.5 8-7.8 2-77.2 33-149.5 87.8-204.3 56.7-56.7 132-87.9 212.2-87.9s155.5 31.2 212.2 87.9C779 752.7 810 825 812 902.2c.1 4.4 3.6 7.8 8 7.8h60a8 8 0 0 0 8-8.2c-1-47.8-10.9-94.3-29.5-138.2zM512 534c-45.9 0-89.1-17.9-121.6-50.4S340 407.9 340 362c0-45.9 17.9-89.1 50.4-121.6S466.1 190 512 190s89.1 17.9 121.6 50.4S684 316.1 684 362c0 45.9-17.9 89.1-50.4 121.6S557.9 534 512 534z">
                                 </path>
                             </svg>
                         </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#">Mi perfil</a></li>
-                            <li><a class="dropdown-item" href="#">Configuración</a></li>
-                            <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <span class="dropdown-item" href="#">Empresa SRL</span>
+                            </li>
+                            <li>
+                                <span class="dropdown-item" href="#">Licencia Plus ++</span>
+                            </li>
+                            <li>
+                                <span class="dropdown-item" href="#">Vence en 2025</span>
+                            </li>
                         </ul>
                     </div>
                 </li>
@@ -92,7 +100,7 @@
             <div class="col-md-6">
                 <h2>Cosecha actual</h2>
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-12">
                         <h5>Condiciones actuales:</h5>
                         <ul>
                             <li>Agua: 20 ML</li>
@@ -107,7 +115,7 @@
                             <li>Humedad: 75%</li>
                         </ul>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-12">
                         <h5>Fecha de cosecha estimada:</h5>
                         <p>30/05/2023</p>
                         <h5>Estado de la planta:</h5>
@@ -125,13 +133,14 @@
                 </div>
             </div>
         </div>
-
         <div class="chart-container">
             <canvas id="chartPlantaA"></canvas>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"></script>
+
     <script src="./chartPlantA.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
         integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
